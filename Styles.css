@@ -1,0 +1,546 @@
+body{
+    background-color: #011627;
+    width: 100vw;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica;
+    color: black;
+}
+
+option{
+    font-size: 1.25vw;
+}
+
+option:hover{
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    height:1.25vw;
+    bottom:0;
+    font-size:1vw;
+    padding-left: 75vw;
+    width: 100%;
+    background-color:white;
+    color: black;
+    font-weight: 600;
+    text-align: left;
+ }
+
+ ul {
+    list-style: none;
+}
+
+ a, a:visited, a:hover{
+    text-decoration: none;
+    color:black;
+ }
+
+/*=========================================IDs=========================================*/
+#TopBar{
+    background-color: #E9EBED;
+    
+}
+
+#TopBarTitle{
+    font-size: 2.25vw;
+    font-weight: 700;
+    /*      Top   right  bottom  left */
+    padding: 0.5%    0%    0.5%     10%;
+    margin: 0;
+
+}
+
+
+#list{
+    width: 20vw;
+    border-radius:0.25vw;
+    margin: 2.3vw 0vw 0vw 10%;
+    /*        Top   right  bottom  left */
+    padding:   0%    0%      0%     0%;
+    border: none;
+    border-bottom: 0px solid black;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 1vw;
+    position: absolute;
+    z-index: 1;
+}
+
+.list-items {
+    /*        Top   right  bottom  left */
+    padding:   2%    0%      2%     3%;
+    cursor: pointer;
+}
+
+.list-items:hover {
+    background-color: #dddddd;
+  }
+
+#fisrtDiv{
+    height: fit-content;
+    width: 35vw;
+    float:left;
+    margin: 4vw 2vw 2vw 10vw;
+}
+
+#courseNameTextBox{
+    width:20vw;
+}
+
+#lecsNoTextBox{
+    cursor: pointer;
+}
+#tutsNoTextBox{
+    cursor: pointer;
+}
+
+#checkButton{
+    margin-bottom: 1vw;
+}
+
+#checkButton:active {
+    box-shadow: 0vw 0.15vw #666;
+    transform: translateY(0.1vw);
+  }
+
+#checkButton:hover{
+    background-color: #04794e;
+}
+
+#secondDiv{
+    min-height: 12vw;
+    overflow: hidden;
+    width: 39vw;
+    float:left; 
+    margin: 4vw 2vw 2vw 2vw;
+    z-index: 2;
+
+}
+
+.WarningLabel{
+    font-size:1.5vw;    
+    font-weight:bolder;
+    margin:1.5vw 0vw 2vw 1vw;
+    display: none;
+    width:93%;
+   
+}
+
+#thirdDiv{
+    height: 16vw;
+    width: 35vw;
+    position: absolute;
+    left: 0vw;
+    top: 27vw;
+            /* Top   right  bottom  left */
+    margin:  1.25vw   2vw    1vw    10vw;
+}
+
+#codeErrorTextBox{
+    margin-left: 4.5vw;
+    padding-left:0.5vw;
+    outline:none;
+
+}
+
+#crdsErrorLabel{
+    margin-left: 12vw;  
+}
+
+#crdsErrorTextBox{
+    padding-left:0.5vw;
+    margin-left: 21.5vw;
+    width: 3vw;
+    outline:none;
+
+}
+
+#courseNameErrorTextBox{
+    padding-left:0.5vw;
+    margin-left: 10vw;
+    width:20vw;
+    border-width: 1vw;
+    outline:none;
+}
+
+#ErrorButton{
+    margin-top: 0.35vw;
+    background-color: #011627;
+}
+
+#ErrorButton:hover{
+        background-color: #1a2d3c;
+}
+
+#ErrorButton:active {
+    box-shadow: 0vw 0.15vw #666;
+    transform: translateY(0.1vw);
+  }
+
+
+/*==============================================Classes========================================*/
+
+.fieldsDiv{
+    margin-bottom: 4.5%;
+}
+
+.labelStyle{
+    font-size: 1.3vw;    /*1.4vw  135%*/  
+    font-weight:bolder;
+    display: block;
+}
+
+.textBoxStyle{
+    width: 10vw;
+    height:2.25vw;  
+    font-size: 1.05vw; 
+    font-weight: 500;
+    position: absolute;
+    background-color: #ffffff;
+    cursor: pointer; 
+    border:none;
+    border-radius:0.25vw;
+    padding: 0em 0em 0em 0.5vw;
+    margin: 0% 0% 0% 10%;
+    cursor: text;
+    outline: none;
+
+}
+
+
+
+.outputDiv{
+    width:93%;
+    display: none;
+    border-radius:0.25vw;
+            /* Top   right  bottom  left */
+    margin: 0.25vw 0.25vw 0.35vw .75vw ;
+    padding: 0.5vw   0vw     0.5vw   1.25vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.buttonStyle{
+    width: 9vw;
+    height:3.2vw;  
+    font-size: 1.5vw; 
+    font-weight: bold;
+    color: white;
+    background-color: #059862;
+    cursor: pointer; 
+    border:none;
+    border-radius:0.25vw;
+    margin-left: 23.25vw;
+}
+
+.disabledButton{
+    background-color: grey;
+}
+
+.Title{
+    font-size:1.75vw;    
+    font-weight:bolder;
+    margin:0.25vw 0vw 1vw 0vw;
+}
+
+.Panel{
+    background-color: #D2D6DA;
+    border-radius: 0.65vw;
+}
+
+.PanelsContent{
+    margin: 1vw 1.25vw 0vw 1.25vw;
+}
+
+/*===================================Terms and Conditions Classes=========================*/
+
+.TandCOuter{
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+             /* Top   right  bottom  left */
+    margin:      0vw   0vw     0vw    0vw;
+    opacity: 80%;
+    display: none;
+}
+
+.TandCInner{
+    position: absolute;
+    z-index: 1;
+    width: 50vw;
+    height: 37vw;
+    background-color: black;
+             /* Top   right  bottom  left */
+    margin:     2vh   0vw     0vw    25vw;
+    opacity: 95%;
+    border-radius: 0.65vw;
+    display: none;
+}
+
+.TandC_header{
+    color:white;
+    font-size: 2vw;
+    padding: 0vw 0vw 0vw 15vw;
+}
+.TandC_content{
+    color:white;
+    font-size: 1vw;
+    padding: 0vw 1.5vw 0vw 1.5vw;
+}
+
+.acceptButton{
+    background-color: #059862;
+    float: right;
+             /* Top   right  bottom  left */
+     margin:  1.5vw      2vw   2vw   1.25vw ;
+}
+
+.acceptButton:hover{
+    background-color: #05794e;
+}
+
+.acceptButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .acceptButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -1.5vw;
+    transition: 0.5s;
+  }
+  
+  .acceptButton:hover span {
+    padding-right: 1.5vw;
+
+  }
+  
+  .acceptButton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .buttonText{
+    font-size: 1.5vw;
+    font-weight: 300;
+  }
+
+  .hide{
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+/*==================================== Mobile Phone Compatibility ================================== */
+@media only screen and (max-width: 1024px) {
+
+    footer {
+        left: 0;
+        height:3.5vw;
+        bottom:0;
+        font-size:2.75vw;
+        padding-left: 36vw;
+        padding-bottom: 0.5vw;
+        padding-top: 0.5vw;
+        width: 100%;
+        background-color:white;
+        color: black;
+        font-weight: 600;
+        text-align: left;
+     }
+
+    /*==========================================IDs=======================================*/
+    #TopBarTitle{
+        font-size: 6vw;
+        padding: 2%    0%    2%     5%;
+    }
+    
+    #fisrtDiv{
+        height: 45vw;
+        width: 90vw;
+        margin: 7vw 2vw 0vw 5vw;
+    }
+
+    #courseNameTextBox{
+        width:52vw;
+        padding: 0vw 0vw 0vw 0.75vw;
+    }
+
+    #checkButton:hover{
+        background-color: #059862;
+
+    }
+    
+    #secondDiv{
+        min-height: 15vw;
+        width: 90vw;
+        margin: 7vw 2vw 5vw 5vw;
+    }
+
+    .WarningLabel{
+        font-size:6vw;    
+        margin:5vw 0vw 2vw 1vw;
+    }
+    
+    #thirdDiv{
+        display: none;
+    }
+    
+    .fieldsDiv{
+        margin-bottom: 2%;
+    }
+    
+    .labelStyle{
+        font-size: 4vw;    
+        margin-bottom: 1.5%;
+    }
+
+    .textBoxStyle{
+        width: 15vw;
+        height:5.5vw;  
+        font-size: 3vw; 
+        border-radius:2vw;
+        margin: 0% 0% 0% 28%;
+    }
+
+    #list{
+        width: 0vw;
+
+        margin: 0% 0% 0% 28%;
+        /*        Top   right  bottom  left */
+        padding:   5.55%    0%      0%     0%;
+        border: none;
+        border-bottom: 0px solid black;
+        outline: none;
+        background-color: #ffffff;
+        font-size: 1vw;
+        position: absolute;
+    }
+    
+    .list-items {
+        background-color: #ffffff;
+        width: 50.5vw;
+        font-size: 3.5vw;
+        /*        Top       right   bottom         left */
+        padding:  1.25vw      1vw        1.25vw     1vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .list-items:last-child {
+        border-bottom-left-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+    }
+    .list-items:first-child {
+        border-top-left-radius: 2vw;
+        border-top-right-radius: 2vw;
+    }
+
+    .outputDiv{
+        width:94%;
+        border-radius:1.5vw;
+        font-size: 5.0vw;
+                 /* Top   right  bottom  left */
+         margin: 0.25vw   0.25vw   2vw   1.25vw ;
+    }
+
+    .buttonStyle{
+        width: 22vw;
+        height:8.5vw;  
+        font-size: 4vw; 
+        border-radius:1.5vw;
+        margin-left: 62vw;
+    }
+
+    .Title{
+        font-size:6vw;    
+        margin:0.25vw 0vw 2vw 0vw;
+    }
+    
+    .Panel{
+        border-radius: 2vw;
+    }
+    .PanelsContent{
+        margin: 3% 3% 0% 4%;
+    }
+
+    .TandCInner{
+        position: absolute;
+        z-index: 1;
+        width: 90vw;
+        height: max-content;
+        background-color: black;
+                 /* Top   right  bottom  left */
+        margin:     2vh   5vw     0vw    5vw;
+        opacity: 90%;
+        border-radius:1.5vw;
+    }
+
+    .TandC_header{
+        color:white;
+        font-size: 7vw;
+        padding: 0vw 0vw 0vw 12.5vw;
+        margin: 5vw 0vw 3vw 0vw;
+    }
+    .TandC_content{
+        color:white;
+        font-size: 4vw;
+        padding: 0vw 3vw 0vw 4vw;
+    }
+
+    .acceptButton{
+        margin-bottom: 4vw;
+    }
+
+
+    .buttonText{
+        font-size: 2vw;
+        font-weight: 400;
+    }
+    
+    .acceptButton:hover span {
+        padding-right: 3.5vw;
+      }
+} 
+
+
+/*=======================================================Animation======================================================*/
+
+.divDownwards{
+    animation-fill-mode:forwards;
+    animation-duration: 0.75s;
+    animation-timing-function: steps(1080, end);;
+    animation-name:verticalwipe;
+  }
+
+  .wipe{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: linearwipe 0.75s steps(720, end); 
+  }
+
+  .wipeText{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: linearwipeText 0.75s steps(720, end); 
+  }
+
+  @keyframes linearwipeText{ 
+    from { width: 0;} 
+  }  
+
+  
+  @keyframes linearwipe{ 
+    from { width: 0; height:0;} 
+  }  
+
