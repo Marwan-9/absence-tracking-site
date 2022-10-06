@@ -146,7 +146,7 @@ footer {
 }
 
 .WarningLabel{
-    font-size:1.3vw;    
+    font-size:1.3rem;    
     font-weight:bolder;
     margin:1.5vw 0vw 2vw 1.75vw;
     display: none;
@@ -407,6 +407,7 @@ footer {
 
     #checkButton{
         margin-left: 38vw;
+        background-color: red;
     }
 
     #checkButton:hover{
@@ -448,7 +449,8 @@ footer {
         width: 15vw;
         height:5.5vw;  
         font-size: 3vw; 
-        border-radius:2vw;
+        border-radius:1.5vw;
+        background-color: red;
         margin: 0% 0% 0% 28%;
     }
 

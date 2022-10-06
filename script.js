@@ -89,39 +89,42 @@ function loadDataList(e){
 function liveChecking(){
   let i =0;
   while((courseNameTextBox.value).slice(0,7)!=coursesArray[i].slice(0,7)){
-    i++;
+       i++;
   }
   let liveCredits = (coursesArray[i].charAt(coursesArray[i].length-1));
   let liveCode = coursesArray[i].slice(0,3);
   let liveCourseNumber = coursesArray[i].slice(4,7);
-  if (liveCredits==1 || liveCode == "GEN") {
-    TutorialsNumberTextBox.disabled=true;
+
+   if (liveCourseNumber == "480" || liveCourseNumber ==  "481" || liveCourseNumber == "281" || liveCourseNumber == "381" ){
+        TutorialsNumberTextBox.setAttribute("disabled", true);
+        lecturesNumberTextBox.setAttribute("disabled", true);
+        checkButton.disabled=true;
+        checkButton.classList.add("disabledButton");
+        let style = document.createElement('style');
+        style.innerHTML = `
+        #checkButton:hover{
+          background-color: grey;
+        }
+        #checkButton:active {
+          box-shadow: 0vw 0vw #666;
+          transform: translateY(0.0);
+        }
+        `;
+        checkButton.appendChild(style);
   }
 
-  if (liveCourseNumber == "480" || liveCourseNumber ==  "481" || liveCourseNumber == "281" || liveCourseNumber == "381" ){
-    lecturesNumberTextBox.disabled=true;
-    TutorialsNumberTextBox.disabled=true;
-    checkButton.disabled=true;
-    checkButton.classList.add("disabledButton");
-    let style = document.createElement('style');
-    style.innerHTML = `
-    #checkButton:hover{
-      background-color: grey;
-    }
-    #checkButton:active {
-      box-shadow: 0vw 0vw #666;
-      transform: translateY(0.0);
-    }
-    `;
-    checkButton.appendChild(style);
+  else if (liveCredits==1 || liveCode == "GEN") {
+      TutorialsNumberTextBox.setAttribute("disabled", true);
+      lecturesNumberTextBox.removeAttribute("disabled");
   }
+
 
   else {
-    checkButton.removeChild(checkButton.lastChild);
-    lecturesNumberTextBox.disabled=false;
-    TutorialsNumberTextBox.disabled=false;
-    checkButton.disabled=false;
-    checkButton.classList.remove("disabledButton");
+         lecturesNumberTextBox.removeAttribute("disabled");
+         TutorialsNumberTextBox.removeAttribute("disabled");
+         checkButton.removeChild(checkButton.lastChild);
+         checkButton.disabled=false;
+         checkButton.classList.remove("disabledButton");
   }
 }
 
