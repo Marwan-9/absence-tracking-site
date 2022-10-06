@@ -20,7 +20,8 @@ footer {
     height:1.25vw;
     bottom:0;
     font-size:1vw;
-    padding-left: 75vw;
+    padding-left: 77vw;
+    padding-bottom: 0.2vw;;
     width: 100%;
     background-color:white;
     color: black;
@@ -44,7 +45,7 @@ footer {
 }
 
 #TopBarTitle{
-    font-size: 2.25vw;
+    font-size: 2.3rem;
     font-weight: 700;
     /*      Top   right  bottom  left */
     padding: 0.5%    0%    0.5%     10%;
@@ -97,7 +98,10 @@ footer {
 }
 
 #checkButton{
-    margin-bottom: 1vw;
+    margin-left: 14.05vw; 
+
+    display: inline-block;  
+
 }
 
 #checkButton:active {
@@ -109,6 +113,24 @@ footer {
     background-color: #04794e;
 }
 
+
+#clearButton{
+     display: inline-block;
+     margin-left: 0vw; 
+     background-color: #011627;
+}
+
+#clearButton:hover{
+    background-color: #1a2d3c;
+}
+
+#clearButton:active{
+    box-shadow: 0vw 0.15vw #666;
+    transform: translateY(0.1vw);
+}
+
+
+
 #secondDiv{
     min-height: 12vw;
     overflow: hidden;
@@ -119,17 +141,21 @@ footer {
 
 }
 
+#Title2{
+    padding-left: 0.5vw;
+}
+
 .WarningLabel{
-    font-size:1.5vw;    
+    font-size:1.3vw;    
     font-weight:bolder;
-    margin:1.5vw 0vw 2vw 1vw;
+    margin:1.5vw 0vw 2vw 1.75vw;
     display: none;
     width:93%;
    
 }
 
 #thirdDiv{
-    height: 16vw;
+    height: 15.5vw;
     width: 35vw;
     position: absolute;
     left: 0vw;
@@ -139,19 +165,19 @@ footer {
 }
 
 #codeErrorTextBox{
-    margin-left: 4.5vw;
+    margin-left: 4.25vw;
     padding-left:0.5vw;
     outline:none;
 
 }
 
 #crdsErrorLabel{
-    margin-left: 12vw;  
+    margin-left: 13vw;  
 }
 
 #crdsErrorTextBox{
     padding-left:0.5vw;
-    margin-left: 21.5vw;
+    margin-left: 21.0vw;
     width: 3vw;
     outline:none;
 
@@ -159,15 +185,16 @@ footer {
 
 #courseNameErrorTextBox{
     padding-left:0.5vw;
-    margin-left: 10vw;
+    margin-left: 9vw;
     width:20vw;
     border-width: 1vw;
     outline:none;
 }
 
 #ErrorButton{
-    margin-top: 0.35vw;
+    margin-top: 0.75vw;
     background-color: #011627;
+    margin-left: 23.5vw;
 }
 
 #ErrorButton:hover{
@@ -187,14 +214,13 @@ footer {
 }
 
 .labelStyle{
-    font-size: 1.3vw;    /*1.4vw  135%*/  
-    font-weight:bolder;
+    font-size: 1.15rem;    /*1.4vw  135%*/  
     display: block;
 }
 
 .textBoxStyle{
     width: 10vw;
-    height:2.25vw;  
+    height:2.1vw;  
     font-size: 1.05vw; 
     font-weight: 500;
     position: absolute;
@@ -203,7 +229,7 @@ footer {
     border:none;
     border-radius:0.25vw;
     padding: 0em 0em 0em 0.5vw;
-    margin: 0% 0% 0% 10%;
+    margin: 0% 0% 0% 9.5%;
     cursor: text;
     outline: none;
 
@@ -218,21 +244,22 @@ footer {
             /* Top   right  bottom  left */
     margin: 0.25vw 0.25vw 0.35vw .75vw ;
     padding: 0.5vw   0vw     0.5vw   1.25vw;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
 .buttonStyle{
     width: 9vw;
-    height:3.2vw;  
-    font-size: 1.5vw; 
-    font-weight: bold;
+    height:2.9vw;  
+    letter-spacing:0.04vw;
+    font-size: 1.30rem; 
     color: white;
     background-color: #059862;
     cursor: pointer; 
     border:none;
     border-radius:0.25vw;
-    margin-left: 23.25vw;
+    margin-bottom: 1.5vw;
+    margin-top: 0.75vw;
 }
 
 .disabledButton{
@@ -240,7 +267,7 @@ footer {
 }
 
 .Title{
-    font-size:1.75vw;    
+    font-size:1.45rem;    
     font-weight:bolder;
     margin:0.25vw 0vw 1vw 0vw;
 }
@@ -252,6 +279,10 @@ footer {
 
 .PanelsContent{
     margin: 1vw 1.25vw 0vw 1.25vw;
+}
+
+.hiddenDiv{
+    display: none;
 }
 
 /*===================================Terms and Conditions Classes=========================*/
@@ -364,7 +395,7 @@ footer {
     }
     
     #fisrtDiv{
-        height: 45vw;
+        height: 47vw;
         width: 90vw;
         margin: 7vw 2vw 0vw 5vw;
     }
@@ -374,19 +405,29 @@ footer {
         padding: 0vw 0vw 0vw 0.75vw;
     }
 
+    #checkButton{
+        margin-left: 38vw;
+    }
+
     #checkButton:hover{
         background-color: #059862;
 
     }
     
     #secondDiv{
-        min-height: 15vw;
+        min-height: 7vw;
         width: 90vw;
         margin: 7vw 2vw 5vw 5vw;
     }
 
+    #Title2{
+        padding-left: 1vw;
+        padding-bottom: 1vw;
+    }
+
     .WarningLabel{
-        font-size:6vw;    
+        font-size:4.25vw;    
+        padding-left: 2vw;
         margin:5vw 0vw 2vw 1vw;
     }
     
@@ -445,11 +486,12 @@ footer {
     }
 
     .outputDiv{
-        width:94%;
+        width:92%;
         border-radius:1.5vw;
-        font-size: 5.0vw;
+        font-size: 4.25vw;
                  /* Top   right  bottom  left */
          margin: 0.25vw   0.25vw   2vw   1.25vw ;
+         padding-left: 3vw;
     }
 
     .buttonStyle{
@@ -457,12 +499,12 @@ footer {
         height:8.5vw;  
         font-size: 4vw; 
         border-radius:1.5vw;
-        margin-left: 62vw;
+        margin-top: 1vw;
     }
 
     .Title{
-        font-size:6vw;    
-        margin:0.25vw 0vw 2vw 0vw;
+        font-size: 4.75vw;    
+        margin: 0.25vw 0vw 2vw 0vw;
     }
     
     .Panel{
@@ -544,3 +586,39 @@ footer {
     from { width: 0; height:0;} 
   }  
 
+
+  @media (any-pointer: fine){
+    @media only screen and (max-width: 1024px) {
+
+        #fisrtDiv{
+            display: none;
+        }
+
+        #secondDiv{
+            display: none;
+        }
+
+        #thirdDiv{
+            display: none;
+        }
+
+        #TopBar{
+            display: none;
+        }
+
+        .hiddenDiv{
+            display: inline-block;
+            font-size: 7.25vw;
+            color: white;
+            font-weight: bold;
+            padding-left: 5vw;
+            padding-top: 1vw;;
+      
+        }
+
+        footer{
+            display:none;
+        }
+    
+    }
+  }

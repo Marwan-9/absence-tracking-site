@@ -7,6 +7,7 @@ const courseNameTextBox = document.getElementById("courseNameTextBox");
 const list = document.getElementById("list");
 const lecturesNumberTextBox = document.getElementById("lecsNoTextBox");
 const TutorialsNumberTextBox = document.getElementById("tutsNoTextBox");
+const clearButton = document.getElementById("clearButton");
 const checkButton = document.getElementById("checkButton");
 
 //3. Second Panel Components
@@ -27,12 +28,13 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 
 //==== Global Variables
 let coursesArray = [];
-let divHeightArray = [10,15,18,21,24,27.5,31,34];
-let divHeightArrayMobile = [10,12,15,17,20,22.5,23,25];
+let divHeightArray = [10,13,16,19,22,25,28,31];
+let divHeightArrayMobile = [9,10,15,17,20,22.5,23,25];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
 let SecondWarning;
+let deprivedFlag;
 let courseCode;
 let credits;
 let lecturesNumber;
@@ -53,6 +55,9 @@ list.addEventListener("click",liveChecking);
 
 //5. checking(), Runs the algorithm to ckeck absence and shows the result. 
 checkButton.addEventListener("click",checking);
+
+//6. clearing(), Clears all the textboxs and make the app ready for new request.
+clearButton.addEventListener("click",clearing);
 
 
 
@@ -75,7 +80,9 @@ function refreshPage(){
 function loadDataList(e){
      //if ( (e.which>48 && e.which <122) || e.which==8 )
       //TODO: Solve the problem of searching by two words (space).
+
        getAllData((courseNameTextBox.value).split(' ')[0]);
+
 }
 
 
@@ -133,9 +140,21 @@ function checking(){
         keyFrameManuiplater(0,0);
       }
 
+      console.log(outputsNumber);
+      if ( courseCode == "GEN" || credits==1){
+          outputsNumber=1;
+          if (deprivedFlag==1){
+         keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
+         outputsNumber=0;
+          }
+      }
+
+      
       //Drawing the new output's rectangle
       for (let i=1; i<outputsNumber+1; i++){
+      
         keyFrameManuiplater(divHeightArray[outputsNumber],divHeightArrayMobile[outputsNumber]);
+
         setTimeout(function(){secondDiv.classList.add('divDownwards');}, 0);
         setTimeout(function(){outputDivArray[i-1].classList.add('wipe')}, i*50);
       }
@@ -144,6 +163,22 @@ function checking(){
   else{
     //Do nothing if the course textbox is empty
   }
+}
+
+
+function clearing(){
+  removeElements();
+  formsArray[0].reset();
+  formsArray[1].reset();
+  lecturesNumberTextBox.value=0;
+  TutorialsNumberTextBox.value=0;
+  for (let i=1; i<8; i++){
+    setTimeout(function(){outputDivArray[i-1].classList.remove('wipe')}, 0);
+    keyFrameManuiplater(0,6);
+  }
+  setTimeout(function(){warningLabel[0].classList.remove('wipeText')}, 0);
+
+
 }
 
 //==== Utilities Functions (Being called by main functions):
@@ -187,6 +222,7 @@ function showChosenCourseData(chosenCourse) {
 function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
   firstWarning=0;
   SecondWarning=0;
+  deprivedFlag=0;
 
   courseCode = courseID.slice(0,3);
   courseNumber = courseID.slice(4,7);
@@ -213,12 +249,14 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
     }
     else {
         possibleLecs[0]=-1;
+        deprivedFlag=1;
         return possibleLecs;
     }
   }
 
   //====Case 2====:
   if (credits==2 && courseCode!= "GEN"){
+
     let possibleCombinations = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
     let depreived = [-1];
       //Core Algorithm
@@ -246,6 +284,7 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
     }
 
     else {
+      deprivedFlag=1;
       return depreived;
     }
 
@@ -282,6 +321,7 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
       return possibleCombinations;
     }
     else {
+      deprivedFlag=1;
       return depreived;
     }
   }
@@ -289,6 +329,7 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
 
 //4-
 function ShowOutput (possiblites){
+  console.log(possiblites);
   let i=0;
   let outputArray=[];
   while (possiblites[i]!=-1 && i != possiblites.length){
@@ -309,7 +350,7 @@ function ShowOutput (possiblites){
   }
 
   if (possiblites[0]==-1)
-    warningLabel[0].innerHTML = "Condtion: Deprived <br> Contact the administration as soon as possible";
+    warningLabel[0].innerHTML = "Condtion: Deprived <br> Contact the administration ASAP";
   
   else if (firstWarning)
     warningLabel[0].innerHTML = "Condtion: Fisrt Warning";
