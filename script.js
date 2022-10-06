@@ -306,8 +306,10 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
     let possibleCombinations = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
     let depreived = [-1];
 
+      console.log("missedTuts  " + missedTuts);
       //Core Algorithm
       CurrentPoints = 10 - (2 * missedLecs + 1 * missedTuts);
+      console.log("current points " + CurrentPoints);
     for (let i = 0; i <= CurrentPoints; i++) {
       LecsPoints = CurrentPoints - i;
       TutsPoints = i;
