@@ -115,6 +115,14 @@ function liveChecking(){
     `;
     checkButton.appendChild(style);
   }
+
+  else {
+    checkButton.removeChild(checkButton.lastChild);
+    lecturesNumberTextBox.disabled=false;
+    TutorialsNumberTextBox.disabled=false;
+    checkButton.disabled=false;
+    checkButton.classList.remove("disabledButton");
+  }
 }
 
 

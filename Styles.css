@@ -165,7 +165,7 @@ footer {
 }
 
 #codeErrorTextBox{
-    margin-left: 4.25vw;
+    margin-left: 4.0vw;
     padding-left:0.5vw;
     outline:none;
 
@@ -185,7 +185,7 @@ footer {
 
 #courseNameErrorTextBox{
     padding-left:0.5vw;
-    margin-left: 9vw;
+    margin-left: 8.5vw;
     width:20vw;
     border-width: 1vw;
     outline:none;
