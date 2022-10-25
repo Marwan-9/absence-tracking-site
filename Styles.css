@@ -14,20 +14,6 @@ option:hover{
     cursor: pointer;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    height:1.25vw;
-    bottom:0;
-    font-size:1vw;
-    padding-left: 77vw;
-    padding-bottom: 0.2vw;;
-    width: 100%;
-    background-color:white;
-    color: black;
-    font-weight: 600;
-    text-align: left;
- }
 
  ul {
     list-style: none;
@@ -36,6 +22,71 @@ footer {
  a, a:visited, a:hover{
     text-decoration: none;
     color:black;
+ }
+
+ footer{
+    position: absolute;
+    top:48vw;
+    width: 100%;
+    height: 0.05vw;
+    background-color: white;
+ }
+
+ .HeaderDiv{
+    margin: 0vw auto 0vw ;
+    width: fit-content;
+    font-size: 1.75vw;
+    letter-spacing: 0.25vw;
+    padding: 0%;
+    color: white;
+ }
+
+ .textDiv{
+    display: inline-block;
+    display: flex;
+    width:fit-content;
+    margin: 0vw auto 0vw ;
+    font-size: 1.25vw;
+    color: white;
+}
+
+.text{
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.headerText{
+    margin-bottom: 0vw;
+    margin-top: 0.5vw;
+}
+
+.imgDiv{
+    width:fit-content;
+    margin: 0vw auto 0vw ;
+    margin-bottom: 1.5vw;
+    display: flex;
+ }
+
+ .hoverDiv {
+    width: fit-content;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    cursor: pointer;
+
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hoverDiv:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.img{
+    height: 9vw;
+    width: 9vw;
  }
 
 /*=========================================IDs=========================================*/
@@ -207,7 +258,9 @@ footer {
 }
 
 
-
+#openSourceLink:hover{
+    text-decoration: underline;
+}
 
 /*==============================================Classes========================================*/
 
@@ -287,7 +340,60 @@ footer {
     display: none;
 }
 
+
 /*===================================Terms and Conditions Classes=========================*/
+
+footer{
+    top:178vw;
+ }
+
+ .HeaderDiv{
+    font-size: 4vw;
+ 
+ }
+
+ .textDiv{
+    display: inline-block;
+    display: flex;
+    width:fit-content;
+    margin: 0vw auto 0vw ;
+    font-size: 2.75vw;
+    color: white;
+}
+
+.text{
+}
+
+.headerText{
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+
+.imgDiv{
+    padding-bottom: 2.5vw;
+ }
+
+ .hoverDiv {
+    width: fit-content;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    cursor: pointer;
+
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hoverDiv:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.img{
+    height: 17vw;
+    width: 17vw;
+ }
+
 
 .TandCOuter{
     position: absolute;
@@ -316,8 +422,8 @@ footer {
 
 .TandC_header{
     color:white;
-    font-size: 2vw;
-    padding: 0vw 0vw 0vw 15vw;
+    font-size: 2.02vw;
+    text-align: center;
 }
 .TandC_content{
     color:white;
@@ -329,7 +435,7 @@ footer {
     background-color: #059862;
     float: right;
              /* Top   right  bottom  left */
-     margin:  1.5vw      2vw   2vw   1.25vw ;
+     margin:  2.1vw      2vw   2vw   1.25vw ;
 }
 
 .acceptButton:hover{
@@ -366,6 +472,8 @@ footer {
     font-weight: 300;
   }
 
+
+
   .hide{
     display: none;
   }
@@ -374,21 +482,8 @@ footer {
   }
 /*==================================== Mobile Phone Compatibility ================================== */
 @media only screen and (max-width: 1024px) {
+    
 
-    footer {
-        left: 0;
-        height:3.5vw;
-        bottom:0;
-        font-size:2.75vw;
-        padding-left: 39vw;
-        padding-bottom: 0.5vw;
-        padding-top: 0.5vw;
-        width: 100%;
-        background-color:white;
-        color: black;
-        font-weight: 600;
-        text-align: left;
-     }
 
     /*==========================================IDs=======================================*/
     #TopBarTitle{

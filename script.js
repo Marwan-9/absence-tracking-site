@@ -21,10 +21,16 @@ const crdsErrorTextBox = document.getElementById("crdsErrorTextBox");
 const courseNameErrorTextBox = document.getElementById("courseNameErrorTextBox");
 const reportButton = document.getElementById("ErrorButton");
 
-//5. Terms and Conditions Panel Components
+
+//5.Footer Components
+const pics= document.getElementsByClassName("hoverDiv");
+
+//6. Terms and Conditions Panel Components
 const forthDiv= document.getElementById("forthDiv");
 const termsWindow = document.getElementById("TandCInner");
 const agreeButton=document.getElementsByClassName("acceptButton");
+
+
 
 //==== Global Variables
 let coursesArray = [];
@@ -58,6 +64,11 @@ checkButton.addEventListener("click",checking);
 
 //6. clearing(), Clears all the textboxs and make the app ready for new request.
 clearButton.addEventListener("click",clearing);
+
+//7. linkedin(), opens our linkedIn profiles.
+pics[0].addEventListener("click",linkedIn1);
+pics[1].addEventListener("click",linkedIn2);
+
 
 
 
@@ -188,9 +199,18 @@ function clearing(){
     keyFrameManuiplater(0,6);
   }
   setTimeout(function(){warningLabel[0].classList.remove('wipeText')}, 0);
-
-
 }
+
+function linkedIn1(){
+     window.open("https://www.linkedin.com/in/marwan8/","_blank");
+}
+
+function linkedIn2(){
+  let kh ="https://www.linkedin.com/in/khalidmamdou7/";
+  window.open(kh,"_blank");
+  
+}
+
 
 //==== Utilities Functions (Being called by main functions):
 //1-
