@@ -618,6 +618,7 @@ option:hover{
     
      .HeaderDiv{
         font-size: 4vw;
+        letter-spacing: 0.25rem;
      
      }
     
@@ -626,7 +627,7 @@ option:hover{
         display: flex;
         width:fit-content;
         margin: 0vw auto 0vw ;
-        font-size: 2.75vw;
+        font-size: 3.25vw;
         color: white;
     }
     
@@ -635,7 +636,7 @@ option:hover{
     
     .headerText{
         margin-bottom: 1vw;
-        margin-top: 1vw;
+        margin-top: 1rem;
     }
     
     .imgDiv{

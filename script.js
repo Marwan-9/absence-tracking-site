@@ -429,7 +429,7 @@ function keyFrameManuiplater(height,heightMobile){
 const keyFrames = document.createElement("style");
 keyFrames.innerHTML = `
 @keyframes verticalwipe{ 
-  from { height: 0;} to {height:` + height + `rem;}
+  from { height: 0;} to {height: fit-content` + height + `rem;}
 }  
 
 @media only screen and (max-width: 1024px) {
