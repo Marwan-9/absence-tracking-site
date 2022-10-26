@@ -36,7 +36,7 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 //==== Global Variables
 let coursesArray = [];
 let divHeightArray = [10,13,16,19,22,25,28,31];
-let divHeightArrayMobile = [10,10,12,13.5,15.5,17.75,19.75,21.75];
+let divHeightArrayMobile = [12,12,12,13.5,15.5,17.75,19.75,21.75];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
