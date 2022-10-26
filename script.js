@@ -67,7 +67,7 @@ agreeButton[0].addEventListener("click",openSite);
 window.addEventListener("load",refreshPage);
 
 //3. loadDataList(), Get five courses from the API with every keyboard letter being typed.
-courseNameTextBox.addEventListener('keyup',loadDataList);
+courseNameTextBox.addEventListener('keyup' || 'touchend',loadDataList);
 
 //4. liveChecking(), Make an instant check whether the choosen course is eligable for absense or not.
 list.addEventListener("click",liveChecking);
