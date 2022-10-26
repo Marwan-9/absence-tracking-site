@@ -617,7 +617,7 @@ option:hover{
      }
     
      .HeaderDiv{
-        font-size: 4vw;
+        font-size: 4.5vw;
         letter-spacing: 0.25rem;
      
      }
@@ -626,12 +626,23 @@ option:hover{
         display: inline-block;
         display: flex;
         width:fit-content;
-        margin: 0vw auto 0vw ;
-        font-size: 3.25vw;
+        font-size: 3.1vw;
         color: white;
+        padding-left: 2.25vw;
     }
     
     .text{
+    }
+
+    #maText{
+        padding-right: 1vw;
+
+    }
+
+    #khText{
+        padding-left: 1vw;
+
+        
     }
     
     .headerText{
