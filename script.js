@@ -51,7 +51,8 @@ let shiftCounter=0;
 
 let body= document.getElementById("body");
 body.addEventListener("click",function(e){
-  if (e.target.tagName=="LI"){
+  console.log(e.target.tagName);
+  if (e.target.tagName=="LI" || e.target.id=="courseNameTextBox" ){
   }
   else{
     displayNames(courseNameTextBox.value);
@@ -66,7 +67,7 @@ agreeButton[0].addEventListener("click",openSite);
 window.addEventListener("load",refreshPage);
 
 //3. loadDataList(), Get five courses from the API with every keyboard letter being typed.
-courseNameTextBox.addEventListener('keyup' || 'touchend',loadDataList);
+courseNameTextBox.addEventListener('keyup',loadDataList);
 
 //4. liveChecking(), Make an instant check whether the choosen course is eligable for absense or not.
 list.addEventListener("click",liveChecking);
