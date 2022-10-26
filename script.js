@@ -46,7 +46,18 @@ let courseCode;
 let credits;
 let lecturesNumber;
 let TutorialsNumber;
+let isShiftPressed=0;
+let shiftCounter=0;
 
+let body= document.getElementById("body");
+body.addEventListener("click",function(e){
+  if (e.target.tagName=="LI"){
+  }
+  else{
+    displayNames(courseNameTextBox.value);
+  }
+
+});
 //===== Function to be triggered:
 //1. openSite(), opens the site if the user accept the Terms and Conditons.
 agreeButton[0].addEventListener("click",openSite);
@@ -89,10 +100,10 @@ function refreshPage(){
   formsArray[1].reset();
 }
 
-function loadDataList(e){
+function loadDataList(key){
      //if ( (e.which>48 && e.which <122) || e.which==8 )
       //TODO: Solve the problem of searching by two words (space).
-      getAllData((courseNameTextBox.value).split(' ')[0]);
+      getAllData((courseNameTextBox.value).split(':')[0],key);
 
 }
 
@@ -214,31 +225,36 @@ function linkedIn2(){
 
 //==== Utilities Functions (Being called by main functions):
 //1-
-const getAllData = async (liveTextboxValue) => {
-    const response = await fetch('https://absence-tracking-api.herokuapp.com/api/courses?searchCourse=' + liveTextboxValue , {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
+const getAllData = async (liveTextboxValue,key) => {
+  console.log (key.which);
+
+  console.log (key.which + "  " + isShiftPressed);
+
+  if (((key.which>47 && key.which<58) ||(key.which>64 && key.which<91) || (key.which>96 && key.which<123))){
+
+      const response = await fetch('https://absence-tracking-api.herokuapp.com/api/courses?searchCourse=' + liveTextboxValue , {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      const myJson = await response.json(); 
+      const jsonObj = JSON.parse(JSON.stringify(myJson));
+
+      while (list.hasChildNodes())
+        list.removeChild(list.lastChild);
+    
+      for (let i=0; i<myJson.length; i++){
+          coursesArray[i] = (jsonObj[i]["Course code"]+ ": " + jsonObj[i]["Course name"] + jsonObj[i]["Credit Hours"]);
+          let listItem = document.createElement("li");
+          listItem.classList.add("list-items");
+          listItem.setAttribute("onclick", "displayNames('" + coursesArray[i].slice(0, -1) + "')");
+          listItem.innerHTML = coursesArray[i].slice(0, -1);
+          document.querySelector(".list").appendChild(listItem);
       }
-    });
-
-    const myJson = await response.json(); 
-    const jsonObj = JSON.parse(JSON.stringify(myJson));
-
-    while (list.hasChildNodes())
-      list.removeChild(list.lastChild);
-  
-    for (let i=0; i<myJson.length; i++){
-        coursesArray[i] = (jsonObj[i]["Course code"]+ ": " + jsonObj[i]["Course name"] + jsonObj[i]["Credit Hours"]);
-        let listItem = document.createElement("li");
-        listItem.classList.add("list-items");
-        listItem.setAttribute("onclick", "displayNames('" + coursesArray[i].slice(0, -1) + "')");
-        listItem.innerHTML = coursesArray[i].slice(0, -1);
-        document.querySelector(".list").appendChild(listItem);
-    }
-
-
   }
+}
 
 //2-
 function showChosenCourseData(chosenCourse) {
