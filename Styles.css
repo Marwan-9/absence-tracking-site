@@ -343,56 +343,6 @@ option:hover{
 
 /*===================================Terms and Conditions Classes=========================*/
 
-footer{
-    top:178vw;
- }
-
- .HeaderDiv{
-    font-size: 4vw;
- 
- }
-
- .textDiv{
-    display: inline-block;
-    display: flex;
-    width:fit-content;
-    margin: 0vw auto 0vw ;
-    font-size: 2.75vw;
-    color: white;
-}
-
-.text{
-}
-
-.headerText{
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-}
-
-.imgDiv{
-    padding-bottom: 2.5vw;
- }
-
- .hoverDiv {
-    width: fit-content;
-    padding-left: 3.5vw;
-    padding-right: 3.5vw;
-    cursor: pointer;
-
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hoverDiv:hover {
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.img{
-    height: 17vw;
-    width: 17vw;
- }
 
 
 .TandCOuter{
@@ -648,6 +598,58 @@ footer{
     .acceptButton:hover span {
         padding-right: 3.5vw;
       }
+
+      footer{
+        top:178vw;
+     }
+    
+     .HeaderDiv{
+        font-size: 4vw;
+     
+     }
+    
+     .textDiv{
+        display: inline-block;
+        display: flex;
+        width:fit-content;
+        margin: 0vw auto 0vw ;
+        font-size: 2.75vw;
+        color: white;
+    }
+    
+    .text{
+    }
+    
+    .headerText{
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    
+    .imgDiv{
+        padding-bottom: 2.5vw;
+     }
+    
+     .hoverDiv {
+        width: fit-content;
+        padding-left: 3.5vw;
+        padding-right: 3.5vw;
+        cursor: pointer;
+    
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    .hoverDiv:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    .img{
+        height: 17vw;
+        width: 17vw;
+     }
+    
 } 
 
 

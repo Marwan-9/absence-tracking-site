@@ -1,5 +1,6 @@
 //==== Accsessing DOM from JavaScript:
 //1. Main Components 
+
 const formsArray = document.getElementsByClassName("Form");
 
 //2. First Panel Components:
@@ -35,7 +36,7 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 //==== Global Variables
 let coursesArray = [];
 let divHeightArray = [10,13,16,19,22,25,28,31];
-let divHeightArrayMobile = [9,10,15,17,20,22.5,23,25];
+let divHeightArrayMobile = [10,10,12,13.5,15.5,17.75,19.75,21.75];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
@@ -91,8 +92,7 @@ function refreshPage(){
 function loadDataList(e){
      //if ( (e.which>48 && e.which <122) || e.which==8 )
       //TODO: Solve the problem of searching by two words (space).
-
-       getAllData((courseNameTextBox.value).split(' ')[0]);
+      getAllData((courseNameTextBox.value).split(' ')[0]);
 
 }
 
@@ -236,6 +236,8 @@ const getAllData = async (liveTextboxValue) => {
         listItem.innerHTML = coursesArray[i].slice(0, -1);
         document.querySelector(".list").appendChild(listItem);
     }
+
+
   }
 
 //2-
