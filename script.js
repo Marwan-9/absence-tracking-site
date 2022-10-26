@@ -56,8 +56,8 @@ body.addEventListener("click",function(e){
   else{
     displayNames(courseNameTextBox.value);
   }
-
 });
+
 //===== Function to be triggered:
 //1. openSite(), opens the site if the user accept the Terms and Conditons.
 agreeButton[0].addEventListener("click",openSite);
@@ -100,10 +100,10 @@ function refreshPage(){
   formsArray[1].reset();
 }
 
-function loadDataList(key){
+function loadDataList(){
      //if ( (e.which>48 && e.which <122) || e.which==8 )
       //TODO: Solve the problem of searching by two words (space).
-      getAllData((courseNameTextBox.value).split(':')[0],key);
+      getAllData((courseNameTextBox.value).split(':')[0]);
 
 }
 
@@ -225,13 +225,7 @@ function linkedIn2(){
 
 //==== Utilities Functions (Being called by main functions):
 //1-
-const getAllData = async (liveTextboxValue,key) => {
-  console.log (key.which);
-
-  console.log (key.which + "  " + isShiftPressed);
-
-  if (((key.which>47 && key.which<58) ||(key.which>64 && key.which<91) || (key.which>96 && key.which<123))){
-
+const getAllData = async (liveTextboxValue) => {
       const response = await fetch('https://absence-tracking-api.herokuapp.com/api/courses?searchCourse=' + liveTextboxValue , {
         method: 'GET',
         headers: {
@@ -253,7 +247,7 @@ const getAllData = async (liveTextboxValue,key) => {
           listItem.innerHTML = coursesArray[i].slice(0, -1);
           document.querySelector(".list").appendChild(listItem);
       }
-  }
+  
 }
 
 //2-
