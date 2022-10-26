@@ -35,8 +35,8 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 
 //==== Global Variables
 let coursesArray = [];
-let divHeightArray = [10,13,16,19,22,25,28,31];
-let divHeightArrayMobile = [12,12,12,13.5,15.5,17.75,19.75,21.75];
+let divHeightArray = [12,13,16,19,22,25,28,31];
+let divHeightArrayMobile = [9,9.5,12,13.5,15.5,17.75,19.75,21.75];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
@@ -182,6 +182,11 @@ function checking(){
          outputsNumber=0;
           }
       }
+
+      if (deprivedFlag==1){
+        keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
+
+         }
 
       
       //Drawing the new output's rectangle
@@ -429,7 +434,7 @@ function keyFrameManuiplater(height,heightMobile){
 const keyFrames = document.createElement("style");
 keyFrames.innerHTML = `
 @keyframes verticalwipe{ 
-  from { height: 0;} to {height: fit-content` + height + `rem;}
+  from { height: 0;} to {height:` + height + `rem;}
 }  
 
 @media only screen and (max-width: 1024px) {
