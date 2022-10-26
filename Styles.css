@@ -185,7 +185,7 @@ option:hover{
 
 
 #secondDiv{
-    min-height: 12vw;
+    min-height: 7vw;
     overflow: hidden;
     width: 39vw;
     float:left; 
@@ -474,7 +474,7 @@ option:hover{
     }
     
     #secondDiv{
-        min-height: 7vw;
+        min-height: 60px;
         width: 90vw;
         margin: 7vw 2vw 5vw 5vw;
     }

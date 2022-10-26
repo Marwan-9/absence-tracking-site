@@ -36,7 +36,7 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 //==== Global Variables
 let coursesArray = [];
 let divHeightArray = [10,13,16,19,22,25,28,31];
-let divHeightArrayMobile = [10,10,12,13.5,15.5,17.75,19.75,21.75];
+let divHeightArrayMobile = [15,20,23,27,30,35,40,43];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
@@ -51,8 +51,8 @@ let shiftCounter=0;
 
 let body= document.getElementById("body");
 body.addEventListener("click",function(e){
-  console.log(e.target.tagName);
-  if (e.target.tagName=="LI" || e.target.id=="courseNameTextBox" ){
+  console.log(e.target);
+  if (e.target.tagName=="LI" || e.target.tagName=="UL" ){
   }
   else{
     displayNames(courseNameTextBox.value);
@@ -434,7 +434,7 @@ keyFrames.innerHTML = `
 
 @media only screen and (max-width: 1024px) {
   @keyframes verticalwipe{ 
-    from { height: 0;} to {height:` + heightMobile + `rem;}
+    from { height: 0;} to {height:` + heightMobile + `vh;}
   }  
 }
 `;
