@@ -695,25 +695,25 @@ option:hover{
   }
 
   .wipe{
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: linearwipe 0.75s steps(720, end); 
+    -webkit-display: block;
+    -webkit-white-space: nowrap;
+    -webkit-overflow: hidden;
+    -webkit-animation: linearwipe 0.75s steps(720, end); 
   }
 
   .wipeText{
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: linearwipeText 0.75s steps(720, end); 
+    -webkit-display: block;
+    -webkit-white-space: nowrap;
+    -webkit-overflow: hidden;
+    -webkit-animation: linearwipeText 0.75s steps(720, end); 
   }
 
-  @keyframes linearwipeText{ 
+  @-webkit-keyframes linearwipeText{ 
     from { width: 0;} 
   }  
 
   
-  @keyframes linearwipe{ 
+  @-webkit-keyframes linearwipe{ 
     from { width: 0; height:0;} 
   }  
 
