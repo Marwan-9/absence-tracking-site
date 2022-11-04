@@ -36,7 +36,7 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 //==== Global Variables
 let coursesArray = [];
 let divHeightArray = [12,13,16,19,22,25,28,31];
-let divHeightArrayMobile = [9,9.5,12,13.5,15.5,17.75,19.75,21.75];
+let divHeightArrayMobile = [18,19,24,27,31,36,40,42];
 let OddGENsCourse = ["GEN341","GEN342","GEN004","GEN333"];
 let securityKey=0;
 let outputsNumber;
@@ -443,7 +443,7 @@ keyFrames.innerHTML = `
 
 @media only screen and (max-width: 1024px) {
   @keyframes verticalwipe{ 
-    from { height: 0;} to {height:` + heightMobile + `vh;}
+    from { height: 0;} to {height:` + heightMobile + `vw;}
   }  
 }
 `;
