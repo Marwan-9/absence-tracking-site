@@ -105,7 +105,11 @@ function refreshPage(){
 function loadDataList(){
      //if ( (e.which>48 && e.which <122) || e.which==8 )
       //TODO: Solve the problem of searching by two words (space).
+      if ((courseNameTextBox.value.includes(':')))
       getAllData((courseNameTextBox.value).split(':')[0]);
+      else
+      getAllData((courseNameTextBox.value).split(' ')[0]);
+
 
 }
 
