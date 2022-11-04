@@ -36,7 +36,7 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 //==== Global Variables
 let coursesArray = [];
 let divHeightArray = [12,13,16,19,22,25,28,31];
-let divHeightArrayMobile = [18,19,24,27,31,36,40,42];
+let divHeightArrayMobile = [50,19,24,27,31,36,40,42];
 let OddGENsCourse = ["GEN341","GEN342","GEN004","GEN333"];
 let securityKey=0;
 let outputsNumber;
