@@ -196,6 +196,7 @@ function checking(){
       }
 
       else {
+        secondDiv.removeChild(secondDiv.lastChild);
         keyFrameManuiplater(divHeightArray[outputsNumber],divHeightArrayMobile[outputsNumber]);
       }
 
@@ -458,6 +459,6 @@ keyFrames.innerHTML = `
 }
 `;
 
-secondDiv.removeChild(secondDiv.lastChild);
+
 secondDiv.appendChild(keyFrames);
 }
