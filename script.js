@@ -457,5 +457,7 @@ keyFrames.innerHTML = `
 
 }
 `;
+
+secondDiv.removeChild(secondDiv.lastChild);
 secondDiv.appendChild(keyFrames);
 }
