@@ -445,7 +445,11 @@ keyFrames.innerHTML = `
 @media only screen and (max-width: 1024px) {
   @keyframes verticalwipe{ 
     from { height: 0;} to {height:` + heightMobile + `vw;}
-  }  
+  }
+  @-webkit-keyframes verticalwipe{ 
+    from { height: 0;} to {height:` + heightMobile + `vw;}
+  }
+
 }
 `;
 secondDiv.appendChild(keyFrames);
