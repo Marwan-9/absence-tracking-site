@@ -688,10 +688,10 @@ option:hover{
 /*=======================================================Animation======================================================*/
 
 .divDownwards{
-    animation-fill-mode:forwards;
-    animation-duration: 0.75s;
-    animation-timing-function: steps(1080, end);;
-    animation-name:verticalwipe;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-timing-function: steps(1080, end);;
+    -webkit-animation-name:verticalwipe;
   }
 
   .wipe{
