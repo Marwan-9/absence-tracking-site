@@ -37,12 +37,14 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 let coursesArray = [];
 let divHeightArray = [12,13,16,19,22,25,28,31];
 let divHeightArrayMobile = [9,9.5,12,13.5,15.5,17.75,19.75,21.75];
+let OddGENsCourse = ["GENN341","GENN342","GENN004","GENN333"];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
 let SecondWarning;
 let deprivedFlag;
 let courseCode;
+let course;
 let credits;
 let lecturesNumber;
 let TutorialsNumber;
@@ -275,10 +277,11 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
 
   courseCode = courseID.slice(0,3);
   courseNumber = courseID.slice(4,7);
+  course = courseCode + courseNumber;
   let CurrentPoints, LecsPoints, TutsPoints, j=0;
 
   //====Case 1====:
-  if (credits==1 || (credits==2 && courseCode == "GEN")){
+  if ((credits==1 || (credits==2 && courseCode == "GEN")) && !OddGENsCourse.includes(course)){
     let possibleLecs = [-1];
 
     //Core Algorithm
@@ -304,7 +307,7 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
   }
 
   //====Case 2====:
-  if (credits==2 && courseCode!= "GEN"){
+  if ((credits==2 && courseCode!= "GEN") || OddGENsCourse.includes(course)){
 
     let possibleCombinations = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
     let depreived = [-1];
