@@ -177,7 +177,8 @@ function checking(){
       //Deleting all output's rectangles 
       for (let i=1; i<8; i++){
         setTimeout(function(){outputDivArray[i-1].classList.remove('wipe')}, 0);
-        keyFrameManuiplater(0,0);
+        keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
+
       }
 
       if ( (courseCode == "GEN" || credits==1) && !OddGENsCourse.includes(course) ){
