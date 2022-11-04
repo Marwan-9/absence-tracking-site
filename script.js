@@ -53,7 +53,6 @@ let shiftCounter=0;
 
 let body= document.getElementById("body");
 body.addEventListener("click",function(e){
-  console.log(e.target);
   if (e.target.tagName=="LI" || e.target.tagName=="UL" ){
   }
   else{
@@ -119,6 +118,7 @@ function liveChecking(){
   let liveCredits = (coursesArray[i].charAt(coursesArray[i].length-1));
   let liveCode = coursesArray[i].slice(0,3);
   let liveCourseNumber = coursesArray[i].slice(4,7);
+  course =  liveCode +liveCourseNumber;
 
    if (liveCourseNumber == "480" || liveCourseNumber ==  "481" || liveCourseNumber == "281" || liveCourseNumber == "381" ){
         TutorialsNumberTextBox.setAttribute("disabled", true);
@@ -138,7 +138,7 @@ function liveChecking(){
         checkButton.appendChild(style);
   }
 
-  else if (liveCredits==1 || liveCode == "GEN") {
+  else if ((liveCredits==1 || liveCode == "GEN") && !OddGENsCourse.includes(course) ) {
       TutorialsNumberTextBox.setAttribute("disabled", true);
       lecturesNumberTextBox.removeAttribute("disabled");
   }
@@ -176,8 +176,7 @@ function checking(){
         keyFrameManuiplater(0,0);
       }
 
-      console.log(outputsNumber);
-      if ( courseCode == "GEN" || credits==1){
+      if ( (courseCode == "GEN" || credits==1) && !OddGENsCourse.includes(course) ){
           outputsNumber=1;
           if (deprivedFlag==1){
          keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
@@ -347,10 +346,9 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
     let possibleCombinations = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
     let depreived = [-1];
 
-      console.log("missedTuts  " + missedTuts);
       //Core Algorithm
       CurrentPoints = 10 - (2 * missedLecs + 1 * missedTuts);
-      console.log("current points " + CurrentPoints);
+
     for (let i = 0; i <= CurrentPoints; i++) {
       LecsPoints = CurrentPoints - i;
       TutsPoints = i;
@@ -383,7 +381,6 @@ function CalculateAbsense(courseID,credits,missedLecs,missedTuts){
 
 //4-
 function ShowOutput (possiblites){
-  console.log(possiblites);
   let i=0;
   let outputArray=[];
   while (possiblites[i]!=-1 && i != possiblites.length){
@@ -391,12 +388,13 @@ function ShowOutput (possiblites){
     i++;
   }
 
+  course = courseCode + courseNumber;
   outputsNumber = outputArray.length/2;
 
   let j=0;
   for (let i=0; i< outputArray.length ; i=i+2 ){
 
-    if (credits==1 || (credits==2 && courseCode.slice(0,3)=="GEN"))
+    if ((credits==1 || (credits==2 && courseCode.slice(0,3)=="GEN")) && !OddGENsCourse.includes(course) )
       outputDivArray[j].innerHTML =  outputArray[i] + " Lectures";
     else
       outputDivArray[j].innerHTML =  outputArray[i] + " Lectures and " + outputArray[i+1] + " Tutorials";
