@@ -160,6 +160,7 @@ function liveChecking(){
 
 
 function checking(){
+  refreshPage();
   console.log("I have enterd checking");
   if (document.cookie=="securityKey=1" && courseNameTextBox.value!= ""){
       showChosenCourseData((courseNameTextBox.value).slice(0,7));
