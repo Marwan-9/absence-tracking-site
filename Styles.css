@@ -688,7 +688,7 @@ option:hover{
 /*=======================================================Animation======================================================*/
 
 .divDownwards{
-    animation-fill-mode:both;
+    animation-fill-mode:forwards;
     animation-duration: 0.75s;
     animation-timing-function: steps(1080, end);;
     animation-name:verticalwipe;
