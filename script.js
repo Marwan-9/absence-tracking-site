@@ -160,6 +160,7 @@ function liveChecking(){
 
 
 function checking(){
+  console.log("I have enterd checking");
   if (document.cookie=="securityKey=1" && courseNameTextBox.value!= ""){
       showChosenCourseData((courseNameTextBox.value).slice(0,7));
       //Getting parameters ready for calculating
@@ -178,6 +179,7 @@ function checking(){
       for (let i=1; i<8; i++){
         setTimeout(function(){outputDivArray[i-1].classList.remove('wipe')}, 0);
         keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
+        console.log("I have deleted");
 
       }
 
@@ -201,6 +203,8 @@ function checking(){
 
         setTimeout(function(){secondDiv.classList.add('divDownwards');}, 0);
         setTimeout(function(){outputDivArray[i-1].classList.add('wipe')}, i*50);
+        console.log("called key maniplater ");
+
       }
   }
 
@@ -446,7 +450,7 @@ keyFrames.innerHTML = `
   @-webkit-keyframes verticalwipe{ 
     from { height: 0;} to {height:` + heightMobile + `vw;}
   }
-  
+
   @keyframes verticalwipe{ 
     from { height: 0;} to {height:` + heightMobile + `vw;}
   }
