@@ -37,7 +37,7 @@ const agreeButton=document.getElementsByClassName("acceptButton");
 let coursesArray = [];
 let divHeightArray = [12,13,16,19,22,25,28,31];
 let divHeightArrayMobile = [9,9.5,12,13.5,15.5,17.75,19.75,21.75];
-let OddGENsCourse = ["GENN341","GENN342","GENN004","GENN333"];
+let OddGENsCourse = ["GEN341","GEN342","GEN004","GEN333"];
 let securityKey=0;
 let outputsNumber;
 let firstWarning;
