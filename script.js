@@ -190,8 +190,7 @@ function checking(){
 
       if (deprivedFlag==1){
         keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
-
-         }
+      }
 
       
       //Drawing the new output's rectangle
@@ -444,7 +443,7 @@ keyFrames.innerHTML = `
 
 @media only screen and (max-width: 1024px) {
   @keyframes verticalwipe{ 
-    from { height: 0;} to {height:` + heightMobile + `rem;}
+    from { height: 0;} to {height:` + heightMobile + `em;}
   }  
 }
 `;
