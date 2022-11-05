@@ -450,7 +450,7 @@ keyFrames.innerHTML = `
 }  
 
 @media only screen and (max-width: 1024px) {
-  @-webkit-keyframes verticalwipe{ 
+  @keyframes verticalwipe{ 
     from { height: 0;} to {height:` + heightMobile + `vw;}
   }
 

@@ -690,8 +690,8 @@ option:hover{
 .divDownwards{
     animation-fill-mode:forwards;
     animation-duration: 0.75s;
+    -webkit-animation-delay: 2s;
     animation-timing-function: steps(1080, end);;
-    animation-delay: 0.8s;;
     animation-name:verticalwipe;
   }
 
