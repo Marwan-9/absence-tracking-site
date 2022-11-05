@@ -467,11 +467,6 @@ for (let i=1; i<8; i++){
 
 
 
-  keyFrameManuiplater(divHeightArray[outputsNumber],divHeightArrayMobile[outputsNumber]);
-
-
-
-
 //Drawing the new output's rectangle
 for (let i=1; i<outputsNumber+1; i++){
 
