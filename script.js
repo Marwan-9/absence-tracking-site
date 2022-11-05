@@ -458,6 +458,11 @@ keyFrames.innerHTML = `
 }
 `;
 
+for (let i=1; i<8; i++){
+  setTimeout(function(){outputDivArray[i-1].classList.remove('wipe')}, 0);
+  keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
+  console.log("I have deleted");
 
+}
 secondDiv.appendChild(keyFrames);
 }
