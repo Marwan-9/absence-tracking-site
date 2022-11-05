@@ -210,7 +210,7 @@ function checking(){
 
       else {
 
-        if (OS.includes("14") ||(OS.includes("15") ) && OS.includes("iPhone"))
+        if (OS.includes("14") ||(OS.includes("15") || OS.includes("13") ) && OS.includes("iPhone"))
         keyFrameManuiplater(divHeightArray[7],divHeightArrayMobile[7]);
         else
         keyFrameManuiplater(divHeightArray[outputsNumber],divHeightArrayMobile[outputsNumber]);
