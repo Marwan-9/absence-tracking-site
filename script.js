@@ -158,6 +158,7 @@ function liveChecking(){
   else {
          lecturesNumberTextBox.removeAttribute("disabled");
          TutorialsNumberTextBox.removeAttribute("disabled");
+         if (checkButton.lastChild)
          checkButton.removeChild(checkButton.lastChild);
          checkButton.disabled=false;
          checkButton.classList.remove("disabledButton");
