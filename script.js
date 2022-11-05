@@ -458,17 +458,5 @@ keyFrames.innerHTML = `
 }
 `;
 
-
-
-
-
-//Drawing the new output's rectangle
-for (let i=1; i<outputsNumber+1; i++){
-
-  setTimeout(function(){secondDiv.classList.add('divDownwards');}, 0);
-  setTimeout(function(){outputDivArray[i-1].classList.add('wipe')}, i*50);
-  console.log("called key maniplater ");
-
-}
 secondDiv.appendChild(keyFrames);
 }
