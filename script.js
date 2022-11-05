@@ -32,14 +32,7 @@ const termsWindow = document.getElementById("TandCInner");
 const agreeButton=document.getElementsByClassName("acceptButton");
 
 let OS = navigator.appVersion;
-if (OS.includes("14")){
-  console.log("1");
-}
 
-else {
-  console.log("0");
-
-}
 
 
 //==== Global Variables
@@ -69,9 +62,7 @@ body.addEventListener("click",function(e){
   }
 });
 
-console.log(OS);
 if (OS.includes("14")){
-  console.log("14 Exixts");
 }
 //===== Function to be triggered:
 //1. openSite(), opens the site if the user accept the Terms and Conditons.
@@ -167,7 +158,7 @@ function liveChecking(){
   else {
          lecturesNumberTextBox.removeAttribute("disabled");
          TutorialsNumberTextBox.removeAttribute("disabled");
-         checkButton.removeChild(checkButton.lastChild);
+         //checkButton.removeChild(checkButton.lastChild);
          checkButton.disabled=false;
          checkButton.classList.remove("disabledButton");
   }
@@ -176,7 +167,6 @@ function liveChecking(){
 
 
 function checking(){
-  console.log("I have enterd checking");
   if (document.cookie=="securityKey=1" && courseNameTextBox.value!= ""){
       showChosenCourseData((courseNameTextBox.value).slice(0,7));
       //Getting parameters ready for calculating
@@ -195,7 +185,6 @@ function checking(){
       for (let i=1; i<8; i++){
         setTimeout(function(){outputDivArray[i-1].classList.remove('wipe')}, 0);
         keyFrameManuiplater(divHeightArray[0],divHeightArrayMobile[0]);
-        console.log("I have deleted");
 
       }
 
@@ -227,7 +216,6 @@ function checking(){
 
         setTimeout(function(){secondDiv.classList.add('divDownwards');}, 0);
         setTimeout(function(){outputDivArray[i-1].classList.add('wipe')}, i*50);
-        console.log("called key maniplater ");
 
       }
   }
