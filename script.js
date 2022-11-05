@@ -31,7 +31,7 @@ const forthDiv= document.getElementById("forthDiv");
 const termsWindow = document.getElementById("TandCInner");
 const agreeButton=document.getElementsByClassName("acceptButton");
 
-console.log(navigator.appVersion);
+console.log((navigator.appVersion).split('OS')[2]);
 
 console.log(navigator.oscpu);
 
