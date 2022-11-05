@@ -138,6 +138,8 @@ function liveChecking(){
   course =  liveCode +liveCourseNumber;
 
    if (liveCourseNumber == "480" || liveCourseNumber ==  "481" || liveCourseNumber == "281" || liveCourseNumber == "381" ){
+        TutorialsNumberTextBox.value="0";
+        lecturesNumberTextBox.value="0";
         TutorialsNumberTextBox.setAttribute("disabled", true);
         lecturesNumberTextBox.setAttribute("disabled", true);
         checkButton.disabled=true;
@@ -156,6 +158,7 @@ function liveChecking(){
   }
 
   else if ((liveCredits==1 || liveCode == "GEN") && !OddGENsCourse.includes(course) ) {
+      TutorialsNumberTextBox.value="0";
       TutorialsNumberTextBox.setAttribute("disabled", true);
       lecturesNumberTextBox.removeAttribute("disabled");
   }
