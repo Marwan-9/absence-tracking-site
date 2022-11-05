@@ -691,7 +691,7 @@ option:hover{
     animation-fill-mode:forwards;
     animation-duration: 0.75s;
     animation-timing-function: steps(1080, end);;
-    animation-delay: 0.0001s;;
+    animation-delay: 0.8s;;
     animation-name:verticalwipe;
   }
 
