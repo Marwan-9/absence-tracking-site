@@ -66,6 +66,9 @@ console.log(OS);
 if (OS.includes("14")){
   console.log("14 Exixts");
 }
+if (OS.includes("iPhone")){
+  console.log("iphone Exixts");
+}
 //===== Function to be triggered:
 //1. openSite(), opens the site if the user accept the Terms and Conditons.
 agreeButton[0].addEventListener("click",openSite);
@@ -202,7 +205,7 @@ function checking(){
       }
 
       else {
-        if (OS.includes("iPhone") && (OS.includes("13") || OS.includes("14") || OS.includes("15") ) ){
+        if (OS.includes("iPhone") && ( OS.includes("13") || OS.includes("14") || OS.includes("15") ) ){
           keyFrameManuiplater(divHeightArray[7],divHeightArrayMobile[7]);
 
         }
