@@ -31,15 +31,7 @@ const forthDiv= document.getElementById("forthDiv");
 const termsWindow = document.getElementById("TandCInner");
 const agreeButton=document.getElementsByClassName("acceptButton");
 
-let OS = navigator.appVersion;
-if (OS.includes("14")){
-  console.log("1");
-}
 
-else {
-  console.log("0");
-
-}
 
 
 //==== Global Variables
@@ -59,6 +51,7 @@ let lecturesNumber;
 let TutorialsNumber;
 let isShiftPressed=0;
 let shiftCounter=0;
+let OS = navigator.appVersion;
 
 let body= document.getElementById("body");
 body.addEventListener("click",function(e){
@@ -205,7 +198,13 @@ function checking(){
       }
 
       else {
-        keyFrameManuiplater(divHeightArray[outputsNumber],divHeightArrayMobile[outputsNumber]);
+        if (OS.includes("14")){
+          keyFrameManuiplater(divHeightArray[7],divHeightArrayMobile[7]);
+
+        }
+        else{        
+          keyFrameManuiplater(divHeightArray[outputsNumber],divHeightArrayMobile[outputsNumber]);
+        }
       }
 
       
