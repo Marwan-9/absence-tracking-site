@@ -413,16 +413,16 @@ function ShowOutput (possiblites){
   }
 
   if (possiblites[0]==-1)
-    warningLabel[0].innerHTML = "Condtion: Deprived <br> Contact the administration ASAP";
+    warningLabel[0].innerHTML = "Current State: Deprived <br> Contact the administration ASAP";
   
   else if (firstWarning)
-    warningLabel[0].innerHTML = "Condtion: Fisrt Warning";
+    warningLabel[0].innerHTML = "Current State: First Warning";
   
   else if (SecondWarning) 
-    warningLabel[0].innerHTML = "Condtion: Second Warning";
+    warningLabel[0].innerHTML = "Current State: Second Warning";
   
   else if (!firstWarning && !SecondWarning)
-    warningLabel[0].innerHTML = "Condtion: No Warnings";
+    warningLabel[0].innerHTML = "Current State: No Warnings";
 }
 
 //5-
