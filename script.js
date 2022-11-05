@@ -31,6 +31,8 @@ const forthDiv= document.getElementById("forthDiv");
 const termsWindow = document.getElementById("TandCInner");
 const agreeButton=document.getElementsByClassName("acceptButton");
 
+console.log(navigator);
+
 console.log(navigator.oscpu);
 
 //==== Global Variables
