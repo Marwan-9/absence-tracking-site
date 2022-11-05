@@ -88,6 +88,9 @@ pics[0].addEventListener("click",linkedIn1);
 pics[1].addEventListener("click",linkedIn2);
 
 
+
+
+
 //==== Main Functions:
 function openSite(){
   forthDiv.classList.remove("show");
@@ -468,3 +471,13 @@ keyFrames.innerHTML = `
 
 secondDiv.appendChild(keyFrames);
 }
+
+
+
+window.addEventListener('load', (event) => {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TRY01RG3HX');
+});
