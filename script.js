@@ -31,9 +31,16 @@ const forthDiv= document.getElementById("forthDiv");
 const termsWindow = document.getElementById("TandCInner");
 const agreeButton=document.getElementsByClassName("acceptButton");
 
-console.log((navigator.appVersion));
+let OS = navigator.appVersion;
+if (OS.includes("14")){
+  console.log("1");
+}
 
-console.log(navigator.oscpu);
+else {
+  console.log("0");
+
+}
+
 
 //==== Global Variables
 let coursesArray = [];
