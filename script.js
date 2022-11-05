@@ -95,7 +95,7 @@ pics[1].addEventListener("click",linkedIn2);
 function openSite(){
   forthDiv.classList.remove("show");
   termsWindow.classList.remove("show");
-  document.cookie = "securityKey=" + 1 + ";" +" expires=Thu, 25 Dec 2025 12:00:00 UTC; path=/";
+  //document.cookie = "securityKey=" + 1 + ";" +" expires=Thu, 25 Dec 2025 12:00:00 UTC; path=/";
 }
 
 function refreshPage(){
