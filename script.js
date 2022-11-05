@@ -205,7 +205,7 @@ function checking(){
       }
 
       else {
-        if (OS.includes("iPhone") && ( OS.includes("13") || OS.includes("14") || OS.includes("15") ) ){
+        if (OS.includes("14")){
           keyFrameManuiplater(divHeightArray[7],divHeightArrayMobile[7]);
 
         }
