@@ -89,6 +89,13 @@ pics[1].addEventListener("click",linkedIn2);
 
 
 
+window.ready.addEventListener('load', (event) => {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TRY01RG3HX');
+});
 
 
 //==== Main Functions:
