@@ -62,7 +62,7 @@ body.addEventListener("click",function(e){
   }
 });
 
-
+console.log(OS);
 if (OS.includes("14")){
   console.log("14 Exixts");
 }
