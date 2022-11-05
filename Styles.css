@@ -687,7 +687,7 @@ option:hover{
 
 /*=======================================================Animation======================================================*/
 
-.divDownwards::-webkit-{
+.divDownwards{
     animation-fill-mode:forwards;
     animation-duration: 0.75s;
     animation-timing-function: steps(1080, end);;
