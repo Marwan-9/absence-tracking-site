@@ -169,7 +169,7 @@ function liveChecking(){
 
 
 function checking(){
-  if (document.cookie=="securityKey=1" && courseNameTextBox.value!= ""){
+  if (courseNameTextBox.value!= ""){
       showChosenCourseData((courseNameTextBox.value).slice(0,7));
       //Getting parameters ready for calculating
       courseCode = courseNameTextBox.value.slice(0, 7);
