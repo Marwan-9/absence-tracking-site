@@ -66,7 +66,7 @@ if (OS.includes("14")){
 }
 //===== Function to be triggered:
 //1. openSite(), opens the site if the user accept the Terms and Conditons.
-//agreeButton[0].addEventListener("click",openSite);
+agreeButton[0].addEventListener("click",openSite);
 
 //2. refreshPage(), Delete all textboxs' values when pages is refreshed.
 window.addEventListener("load",refreshPage);
