@@ -246,7 +246,7 @@ function linkedIn1(){
 }
 
 function linkedIn2(){
-  let kh ="https://www.linkedin.com/in/khalidmamdou7/";
+  let kh ="https://github.com/Khalidmamdou7/";
   window.open(kh,"_blank");
   
 }
@@ -255,7 +255,7 @@ function linkedIn2(){
 //==== Utilities Functions (Being called by main functions):
 //1-
 const getAllData = async (liveTextboxValue) => {
-      const response = await fetch('https://absence-tracking-api.herokuapp.com/api/courses?searchCourse=' + liveTextboxValue , {
+      const response = await fetch('https://absence-tracking-api.onrender.com/api/courses?searchCourse=' + liveTextboxValue , {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -435,6 +435,7 @@ function ShowOutput (possiblites){
   else if (!firstWarning && !SecondWarning)
     warningLabel[0].innerHTML = "Current State: No Warnings";
 }
+
 
 //5-
 function displayNames(value) {
