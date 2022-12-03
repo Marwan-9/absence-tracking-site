@@ -255,7 +255,7 @@ function linkedIn2(){
 //==== Utilities Functions (Being called by main functions):
 //1-
 const getAllData = async (liveTextboxValue) => {
-      const response = await fetch('https://absence-tracking-api.herokuapp.com/api/courses?searchCourse=' + liveTextboxValue , {
+      const response = await fetch('https://absence-tracking-api.onrender.com/api/courses?searchCourse=' + liveTextboxValue , {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
