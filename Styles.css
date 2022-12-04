@@ -717,6 +717,25 @@ option:hover{
     from { width: 0; height:0;} 
   }  
 
+  /*=================================================Site Down========================================================*/
+
+  .siteDown{
+
+    color:white;
+    margin: 4vw 2vw 2vw 10vw;
+    font-size: 3vw;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .siteDown{
+
+        color:white;
+        margin: 13vw 2vw 2vw 7vw;
+        font-size: 7.5vw;
+      }
+    
+}
+
 /*
   @media (any-pointer: fine){
     @media only screen and (max-width: 600px) {
