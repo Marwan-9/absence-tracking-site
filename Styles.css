@@ -82,7 +82,10 @@ option:hover{
 .to_Linkedin:hover{
     color:white;
     cursor: pointer;
-    text-shadow: 0 0 0.8px white;
+    text-shadow: 0 0 0.05rem white;
+}
+.to_Linkedin:visited{
+    color:white;
 }
 
  .hoverDiv {
