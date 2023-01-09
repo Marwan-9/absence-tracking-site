@@ -10,7 +10,7 @@ lectures. Thus, **this tool was designed for Cairo University,
 Faculty of Engineering students** to help them track their 
 absence.
 
-Feel free to try the tool by [Clicking Here !](https://chs-absence.vercel.app/)
+Feel free to try the tool by [Clicking Here!](https://chs-absence.vercel.app/)
 
 ## How to Use
 **1. Choose the course that you want to check its absence.** 
