@@ -17,11 +17,11 @@ Feel free to try the tool by [Clicking Here !](https://chs-absence.vercel.app/)
 **2. Enter the number of lectures and tutorials you already missed, then check.**
 
 <img src="https://i.ibb.co/Gsy5HTr/image.png/" alt="drawing" width="200"/>
-![Input Panel](https://i.ibb.co/Gsy5HTr/image.png/)
+
 
 **3. The tool shows you all combinations and possibilities that you can miss.**
 
-![Output Panel](https://i.ibb.co/LkR6yf8/image.png)
+<img src="https://i.ibb.co/LkR6yf8/image.png/" alt="drawing" width="200"/>
 
 ## How it works 
 As in Faculty of Engneering, Cairo Univeristy. Absence system 
