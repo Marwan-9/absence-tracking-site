@@ -70,6 +70,21 @@ option:hover{
     display: flex;
  }
 
+ .footer_line{
+    color:white;
+}
+.to_Linkedin{
+    color:white;
+    cursor: pointer;
+}
+
+
+.to_Linkedin:hover{
+    color:white;
+    cursor: pointer;
+    text-shadow: 0 0 0.8px white;
+}
+
  .hoverDiv {
     width: fit-content;
     padding-left: 1vw;
