@@ -15,12 +15,12 @@ Feel free to try the tool by [Clicking Here!](https://chs-absence.vercel.app/)
 ## How to Use
 1. Choose the course that you want to check its absence.
 
-**2. Enter the number of lectures and tutorials you already missed, then check.**
+2. Enter the number of lectures and tutorials you already missed, then check.
 
 <img src="https://i.ibb.co/Gsy5HTr/image.png/" alt="drawing" width="500"/>
 
 
-**3. The tool shows you all combinations and possibilities that you can miss.**
+3. The tool shows you all combinations and possibilities that you can miss.
 
 <img src="https://i.ibb.co/LkR6yf8/image.png/" alt="drawing" width="500"/>
 
