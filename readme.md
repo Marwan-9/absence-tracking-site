@@ -30,12 +30,10 @@ is caculated by points. Each group of courses has a limit of points
 that the student can not exceed, also lecture and tutorials have
 different weights.
 
-Ex: A course with a limit of 10 points, a lecture counts for 2 points, 
-and a tutorial counts for one. What are the possibilities that a 
-student could miss?
+Ex: A course with a limit of 10 points, a lecture counts for 2 points, and a tutorial counts for one. What are the possibilities that a student could miss? and what if I told you that he already missed one lecture before?. \
+Instead of doing these calculations every time you need to miss a lecture, you could simply use the tool :").
 
-Instead of doing these calculations every time you need to miss a lecture
-, you could simply use the tool :").
+<img src="https://i.ibb.co/tPB5MTX/absence-tracking-site-flowchart.png" alt="drawing" width="500"/>
 
 ## License 
 
