@@ -1,7 +1,7 @@
 
 # Absence Tracking Tool
-A comprehensive tool that helps Cairo University students 
-to keep track of their absence during the semester.
+A comprehensive tool that helps students of Faculty of Engineering, Cairo University  
+to keep track of their absence.
 
 ## Overview 
 As is the case with most universities worldwide, a student is being
